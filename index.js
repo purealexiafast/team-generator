@@ -53,6 +53,30 @@ const engineerQues = [
 
 ]
 
+const internQues = [
+    {
+        type: "input",
+        name: "name",
+        message: "What is the name of the intern?"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "What is the id of the intern?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "What is the email of the intern?"
+    },
+    {
+        type: "input",
+        name: "officenumber",
+        message: "What is the school of attendance of the intern?"
+    },
+
+]
+
 function managerQuestions (){
     inquirer.prompt(managerQues)
     .then(({name, id, email, officenumber})=>{
@@ -71,6 +95,17 @@ function addEngineer(){
         const engineer = new Engineer(name, id, email, github)
         console.log(engineer)
         employeeList.push(engineer)
+        mainQuestions()
+    })
+}
+
+function addIntern(){
+    inquirer.prompt(internQues)
+    .then(({name, id, email, school})=>{
+        console.log(answers)
+        const intern = new Intern(name, id, email, school)
+        console.log(intern)
+        employeeList.push(intern)
         mainQuestions()
     })
 }

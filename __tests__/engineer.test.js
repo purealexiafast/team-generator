@@ -31,6 +31,3 @@ describe("Engineer", ()=>{
     })
 })
 
-github // GitHub username
-getGithub()
-getRole() 
