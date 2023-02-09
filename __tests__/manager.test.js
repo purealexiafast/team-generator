@@ -1,4 +1,4 @@
-const { describe } = require("yargs")
+const Manager = require("../lib/Manager")
 
 
 
@@ -9,7 +9,7 @@ describe("Manager", ()=>{
         const email = "alexia@gmail.com"
         const officenumber = "12345"
         const e = new Manager(name, id, email, officenumber)
-        expect(e.officenumber).toBe(officenumber)
+        expect(e.officeNumber).toBe(officenumber)
     })
 
     test("getRole() should return intern", () => {
@@ -17,7 +17,7 @@ describe("Manager", ()=>{
         const id = 4
         const email = "alexia@gmail.com"
         const officenumber = "12345"
-        const e = new Employee(name, id, email, officenumber)
+        const e = new Manager(name, id, email, officenumber)
         expect(e.getRole()).toBe("Manager")
     })
 })

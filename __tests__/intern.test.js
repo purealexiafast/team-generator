@@ -1,4 +1,4 @@
-const { describe } = require("yargs")
+const Intern = require("../lib/Intern")
 
 
 
@@ -26,7 +26,7 @@ describe("Intern", ()=>{
         const id = 4
         const email = "alexia@gmail.com"
         const school = "Carleton"
-        const e = new Employee(name, id, email, school)
+        const e = new Intern(name, id, email, school)
         expect(e.getRole()).toBe("Intern")
     })
 })
